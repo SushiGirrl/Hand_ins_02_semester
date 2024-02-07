@@ -1,4 +1,7 @@
 package com.example.hand_ins
+
+import java.util.Locale
+
 fun main() {
     /*
     isEligible();
@@ -20,6 +23,7 @@ fun main() {
     printNumbers();
 
      */
+    println(displayAbbreviationsOfNames("lykke flor andersen"));
 }
 /*
 1.
@@ -114,7 +118,22 @@ abbreviations of the first and middle names except the last name which is displa
 For example, if your name is Robert Brett Roser, then the output should be R.B. Roser.
 Or Benjamin Dalsgaard Hughes will be B.D. Hughes
 */
+fun displayAbbreviationsOfNames(input: String): String{
+    //split string into words
+    val words: List<String> = input.split(" ");
 
+    //the first letters of the words
+    val initials: String = words.dropLast(1).joinToString(". ") { it.first().uppercaseChar().toString()}
+
+    //add the last word
+    val result = if (initials.isNotEmpty()) {
+        "$initials. ${words.last().replaceFirstChar { it.uppercaseChar() }}"
+    }
+    else {
+        "You did not input your full name, try again."
+    }
+    return  result;
+}
 /*
 7.
 Write a program that takes a numerical grade (0-100) as input
