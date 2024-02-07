@@ -24,6 +24,8 @@ fun main() {
 
      */
     println(displayAbbreviationsOfNames("lykke flor andersen"));
+
+    println(calculateGrade(79));
 }
 /*
 1.
@@ -146,7 +148,25 @@ the grade and returns a string representing the letter grade according to the fo
 60-69: "D"
 Below 60: "F"
 */
-
+fun calculateGrade(grade: Int): String{
+    val result: String =
+        if (grade > 89){
+            "A"
+        }
+        else if (grade > 79){
+            "B"
+        }
+        else if (grade > 69){
+            "C"
+        }
+        else if (grade > 59){
+            "D"
+        }
+        else{
+            "F"
+        }
+    return result;
+}
 /*
 8.
 Write a Kotlin function named filterWordsByLength that takes in a list of strings and a minimum length,
