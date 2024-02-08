@@ -3,7 +3,7 @@ package com.example.hand_ins
 import java.util.Locale
 
 fun main() {
-    /*
+
     isEligible();
 
     val max : Int = getMax(1,18,8);
@@ -22,10 +22,11 @@ fun main() {
 
     printNumbers();
 
-     */
     println(displayAbbreviationsOfNames("lykke flor andersen"));
 
     println(calculateGrade(79));
+
+    println(filterWordsByLength(listOf("Hi", "Hey", "Hiya", "Hello", "Greetings", "well met", "Yo" ), 4));
 }
 /*
 1.
@@ -174,3 +175,7 @@ and returns a list containing only the words that have a length greater than
 or equal to the specified minimum length.
 Use filter function and lambda expressions
 */
+fun filterWordsByLength(wordList: List<String>, minLength: Int): List<String> {
+    val filteredList: List<String> = wordList.filter { it.length >= minLength }
+    return filteredList;
+}
