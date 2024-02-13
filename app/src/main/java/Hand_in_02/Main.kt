@@ -27,6 +27,10 @@ fun main() {
 
     println(bensLaptop.isLidOpen);
     sarasSmartphone.takePhoto();
+
+    println("\n")
+    val book: Book = Book("Math", 100, 50);
+    book.identifyProductCategory();
 }
 /*
 2.
