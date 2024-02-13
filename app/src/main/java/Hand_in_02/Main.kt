@@ -31,6 +31,19 @@ fun main() {
     println("\n")
     val book: Book = Book("Math", 100, 50);
     book.identifyProductCategory();
+
+    println("\n");
+    val triangle: Triangle = Triangle("blue", false, 4.5, 6.7, 8.1);
+    val  rectangle: Rectangle = Rectangle("green", true, 12.3, 7.8);
+    val circle: Circle = Circle("red", false, 6.5);
+
+    println("triangle perimeter: " + triangle.calculatePerimeter())
+    println("triangle area: " + triangle.calculateArea());
+    println("rectangle perimeter: " + rectangle.calculatePerimeter());
+    println("rectangle area: " + rectangle.calculateArea());
+    println("circle perimeter: " + circle.calculatePerimeter());
+    println("circle area: " + circle.calculateArea());
+
 }
 /*
 2.
@@ -59,6 +72,7 @@ The 3 classes all overrides the following abstract methods from their parent cla
 calculatePermeter
 calculateArea
 The functions will return the permeter or area of the shape.
+
 Autoshop - optional
 Car
 Create a super class called Car. The Car class has the following fields and methods.
