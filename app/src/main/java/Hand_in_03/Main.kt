@@ -1,4 +1,9 @@
 package Hand_in_03
+
+import android.os.Build
+import androidx.annotation.RequiresApi
+
+@RequiresApi(Build.VERSION_CODES.O)
 fun main() {
 
     /*
@@ -66,6 +71,8 @@ fun main() {
     blueCar.changeGear(3);
     blueCar.speedUp(15);
     blueCar.applyBrakes(60);
+    println("\n ---");
+
     /*
     4.
     Write a class: RedditPost
@@ -80,11 +87,35 @@ fun main() {
     The title and author has to be provided by the constructor.
     Ensure all attributes are private, but accesible by getters & setters.
     Implement functionality such that redditposts can be sorted by upvotes/downvotes
+    */
+    val post1: RedditPost = RedditPost("Cheese", "BillyBob");
+    val post2: RedditPost = RedditPost("klhgkwrhfkef", "Karen");
+
+    println("Post1");
+    println(post1.votes);
+    println(post1.timestamp);
+    //Checking if the timestamp changes
+    Thread.sleep(2000);
+    println(post1.timestamp);
+    post1.upvote();
+    println(post1.votes);
+
+    println("Post2");
+    post2.downvote();
+    println(post2.votes);
+
+    val collectionOfPosts: List<RedditPost> = listOf(post1, post2);
+    println(collectionOfPosts.sorted());
+
+
+
+    /*
     4.5
     Write a class: RedditFrontPage
     The RedditFrontPage has:
     A List of all RedditPosts
     A method in RedditFrontPage deletes a RedditPost from the list, by its index number
+
     5.
     Write a program that takes a list of words as input and prints the frequency of each word.
     Hint: Use a MutableMap
