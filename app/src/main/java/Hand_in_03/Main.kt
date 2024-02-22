@@ -15,6 +15,7 @@ fun main() {
 
     val articleArrayList: ArrayList<Article> = arrayListOf(article1, article2, article3, article4, article5);
     println(articleArrayList);
+    println("\n ---");
 
     /*
     2.
@@ -24,6 +25,18 @@ fun main() {
     Add some different Fastfood objects to an array.
     Now iterate through that array and use some of the methods you have created above.
     */
+    val hawaiiPizza: Pizza = Pizza("Hawaii", 2, 79.0, listOf("Ham", "Ananas"));
+    val tunaSandwitch: Sandwitch = Sandwitch("Tuna", 34, 69.0, listOf("Tuna", "Pesto", "Salad", "Avocado"));
+    val mozerellaSticks: Sides = Sides("Mozerella Sticks", 45.0, 42,);
+    val fries: Sides = Sides("Fries", 30.0, 41);
+
+    val fastFoodArray: ArrayList<FastFood> = arrayListOf(hawaiiPizza, tunaSandwitch, mozerellaSticks, fries);
+
+    for (item in fastFoodArray){
+        println(item.order());
+        println(item.pay());
+        println(item.price);
+    }
 
     /*
     3.
