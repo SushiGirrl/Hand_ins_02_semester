@@ -37,15 +37,36 @@ fun main() {
         println(item.pay());
         println(item.price);
     }
+    println("\n ---");
 
     /*
     3.
-    Create a class that implements the following interface. Now create two objects using the class created
+    Create a class that implements the following interface.
+    Now create two objects using the class created
     interface Vehicle {
         changeGear(int a);
         speedUp(int a);
         applyBrakes(int a);
     }
+    */
+    val redCar: Car = Car();
+    val blueCar: Car = Car();
+
+    redCar.changeGear(1);
+    redCar.speedUp(35);
+    redCar.changeGear(3);
+    redCar.speedUp(80);
+    redCar.applyBrakes(65);
+    println("\n");
+
+    blueCar.changeGear(1);
+    blueCar.speedUp(10);
+    blueCar.changeGear(2);
+    blueCar.speedUp(30);
+    blueCar.changeGear(3);
+    blueCar.speedUp(15);
+    blueCar.applyBrakes(60);
+    /*
     4.
     Write a class: RedditPost
     A Redditpost has :
